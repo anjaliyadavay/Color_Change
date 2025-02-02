@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+    <style>
+        body {
+            background-color: black;
+            /* background-image: linear-gradient(#2897f6, #ffffff, #f68557); */
+            height: 100vh;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+        }
+        #btn1 {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background-image: linear-gradient(rgb(87, 85, 85),black);
+            border: none;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #btn2,#btn3{
+            height: 40px;
+            width: 120px;
+            background-color: rgb(240, 161, 77);
+            border-radius: 15px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn" id="btn1">Circle</button>
+        <div class="btns">
+            <button class="btn" id="btn2">Turn on</button>
+            <button class="btn" id="btn3">Turn off</button> 
+        </div>
+    </div>
+
+    <script>
+        let btns1=document.querySelector("#btn1");
+        let btns2=document.querySelector("#btn2");
+        let btns3=document.querySelector("#btn3");
+
+        let flag = 0;
+
+
+        // let con = document.querySelector(".container"); 
+
+        btns1.addEventListener("mouseover", ()=> {
+            document.body.style.background = "linear-gradient(#2897f6, #ffffff, #f68557)";
+            btns1.style.background = "linear-gradient(orange,yellow)";
+            btn1.style.boxShadow  = "2px 2px 10px 10px rgb(238, 198, 69)";
+        })
+
+        btns2.addEventListener("click", ()=> {
+            document.body.style.background = "linear-gradient(#2897f6, #ffffff, #f68557)";
+            btns1.style.background = "linear-gradient(orange,yellow)";
+            btn1.style.boxShadow  = "2px 2px 10px 10px rgb(238, 198, 69)";
+        })
+
+        btns3.addEventListener("click", ()=> {
+            document.body.style.background = "black";
+            btns1.style.background = "linear-gradient(rgb(87, 85, 85),black)";
+            btn1.style.boxShadow  = "0px 0px 0px 0px black";
+        })
+
+
+        // OR
+
+
+    //      btns1.addEventListener("mouseenter" , () => {
+            
+    //          document.body.classList.toggle("colorchange"); 
+    //          btns1.style.background = "linear-gradient(orange,yellow)";
+    //      });
+
+    //      btns1.addEventListener("mouseout" , () => {
+            
+    //         document.body.style.background = "black"; 
+    //         btns1.style.background = "linear-gradient(rgb(87, 85, 85),black)";
+    //  });
+
+
+    
+    </script>
+</body>
+</html>
